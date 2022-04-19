@@ -19,7 +19,7 @@ jobs:
       - name: Pring App name
         run: |
           echo "Hello 1"
-          echo "App Name : $ {{env.APP_NAME}}"
+          echo "App Name : ${{env.APP_NAME}}"
       
   my-deploy:
     runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
       - name: Pring App ver
         run: |
           echo "Hello 1"
-          echo "App Name : $ {{env.PACK_NAME}}"
+          echo "App Name : ${{env.PACK_NAME}}"
