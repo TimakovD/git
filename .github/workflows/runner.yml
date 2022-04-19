@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
       - name: Print Hello
-      - run: echo 'Hello World from Testing'
+        run: echo 'Hello World from Testing'
       
   my-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Print Hello
-      - run: echo 'Hello World from deploy'
+        run: echo 'Hello World from deploy'
