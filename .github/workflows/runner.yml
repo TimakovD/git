@@ -1,4 +1,7 @@
 name: My-Git-Actions
+env:
+  APP_NAME: "My App"
+  PACK_NAME: "deploy-ver-${{ github.sha }}"
 on:
   push:
     branches: [ main ]
@@ -12,6 +15,11 @@ jobs:
     steps:
       - name: Print Hello
         run: echo 'Hello World from Testing'
+        
+      - name: Pring App name
+        run: |
+          echo "Hello 1"
+          echo "App Name : $ {{env.APP_NAME}}"
       
   my-deploy:
     runs-on: ubuntu-latest
@@ -19,3 +27,7 @@ jobs:
     steps:
       - name: Print Hello
         run: echo 'Hello World from deploy'
+      - name: Pring App ver
+        run: |
+          echo "Hello 1"
+          echo "App Name : $ {{env.PACK_NAME}}"
