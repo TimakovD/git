@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clone repo
+        uses: actions/checkout@v1
+        
+      - name: ls -la
+        run: ls -la
+        
       - name: Print Hello
         run: echo 'Hello World from Testing'
         
